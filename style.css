@@ -1,0 +1,714 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(to right, #2d8bc7, #c62c6c);
+  padding: 10px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #e0e0e0;
+}
+
+.sosmed-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.sosmed-icons a {
+  color: #ffffff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.sosmed-icons a:hover {
+  color: #e0e0e0;
+}
+
+/* Tombol garis tiga defaultnya disembunyikan */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* SLIDESHOW */
+.slideshow {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides-wrapper {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* PRODUK SECTION */
+.produk-section {
+  padding: 60px 40px;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.produk-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.produk-grid a.produk-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.produk-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 260px;
+}
+
+.produk-img {
+  overflow: hidden;
+  height: 200px;
+}
+
+.produk-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.produk-card:hover .produk-img img {
+  transform: scale(1.1);
+}
+
+.produk-info {
+  background: linear-gradient(to right, #2d8bc7, #c62c6c);
+  padding: 15px;
+  text-align: center;
+}
+
+.produk-info p {
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* LAYANAN SECTION */
+.layanan-section {
+  padding: 60px 40px;
+  text-align: center;
+  color: #333;
+}
+
+.layanan-wrapper i {
+  font-size: 48px;
+  color: #c62c6c;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.layanan-wrapper h3 {
+  font-size: 30px;
+  font-weight: 1000;
+  margin-bottom: 20px;
+  color: #2d8bc7;
+}
+
+.layanan-wrapper p {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+.footer {
+  background: linear-gradient(to right, #2d8bc7, #c62c6c);
+  color: white;
+  padding: 40px 30px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: flex-start;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-line {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin: 2px 0;
+}
+
+.footer-social {
+  text-align: left;
+}
+
+.footer-social a {
+  color: white;
+  margin-right: 14px;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  text-decoration: none;
+}
+
+.wa-icon-circle {
+  background-color: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  animation: shake 1.5s infinite;
+  cursor: pointer;
+}
+
+.wa-icon-circle:hover {
+  transform: scale(1.1);
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(4deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-4deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Instagram Section */
+.instagram-section {
+  padding: 60px 30px 40px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.instagram-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color:#333;
+  font-weight: 700;
+}
+
+/* Responsive untuk HP */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    order: 2;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    width: 100%;
+    background: linear-gradient(to right, #2d8bc7, #c62c6c);
+    padding: 15px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 1;
+  }
+
+  .logo img {
+    height: 35px;
+  }
+
+  .slideshow {
+    height: auto;
+  }
+
+  .produk-section {
+    padding: 40px 20px;
+  }
+
+  .produk-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+  }
+
+  .produk-card {
+    max-width: 100%;
+  }
+
+  .layanan-section {
+    padding: 40px 20px;
+  }
+
+  .layanan-wrapper h3 {
+    font-size: 24px;
+  }
+
+  .layanan-wrapper p {
+    font-size: 16px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-column h4 {
+    font-size: 16px;
+  }
+
+  .footer-column ul li a {
+    font-size: 14px;
+  }
+
+  .footer-social {
+    text-align: center;
+  }
+
+  .instagram-section {
+    padding: 40px 20px;
+  }
+
+  .instagram-section h2 {
+    font-size: 22px;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .wa-icon-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .wa-icon-circle svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* ISI Profil */
+
+.profil-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 40px;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.profil-image {
+  flex: 1;
+  min-width: 280px;
+  max-width: 450px;
+}
+
+.profil-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profil-text {
+  flex: 1;
+  min-width: 280px;
+  color: #333;
+  text-align: justify;
+}
+
+.profil-text h2 {
+  font-size: 28px;
+  color: #2d8bc7;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.profil-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.profil-text a {
+  color: #c62c6c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.profil-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profil-section {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .profil-text {
+    text-align: justify;
+  }
+
+  .profil-text h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .profil-text p {
+    font-size: 15px;
+  }
+}
+
+/* ISI Produk */
+
+.produk-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Kartu Produk */
+/* Judul kategori */
+.judul-kategori {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 50px 0 20px;
+  color: #2d8bc7; /* biru */
+}
+
+/* Grid */
+.produk-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Kartu Produk */
+.produk-card {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.produk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Gambar Produk */
+.produk-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Nama Produk & Harga */
+.produk-footer {
+  background: linear-gradient(135deg, #2d8bc7, #c62c6c);
+  text-align: center;
+  padding: 10px 8px;
+}
+
+.nama-produk {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #f7ecff;
+  line-height: 1.3;
+}
+
+.harga {
+  margin: 2px 0 0;
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: #ffdde9;
+  line-height: 1.2;
+}
+
+.tambahan-opsional {
+  position: relative;
+  max-width: 600px;
+  margin: 30px auto 60px;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2d8bc7, #c62c6c);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  color: #ffffff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  will-change: transform; /* Tambahan agar browser optimize transform */
+  z-index: 1;
+  display: block; /* Pastikan tampil sebagai blok utuh */
+}
+
+/* Saat hover: naik & bayangan lebih besar */
+.tambahan-opsional:hover {
+  transform: translateY(-8px);  /* Ini yang bikin "ngangkat" */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam */
+  z-index: 2;
+}
+
+.tambahan-opsional h3 {
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.tambahan-opsional ul {
+  padding-left: 20px;
+  margin: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.tambahan-opsional li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+/* Ikon dekoratif */
+.tambahan-opsional::after {
+  content: "🧸";
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  font-size: 100px;
+  color: #ffffff;
+  pointer-events: none;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+/* Ikon ikut gerak */
+.tambahan-opsional:hover::after {
+  transform: translateY(-8px);
+}
+
+/*table*/
+.price-list-section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+  color: #111; /* Semua teks hitam */
+  background-color: #ffffff; /* Abu-abu sangat muda sebagai latar */
+}
+
+.price-list h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #111; /* Judul utama hitam */
+}
+
+.price-category {
+  margin-bottom: 50px;
+  border-bottom: 2px solid #ccc; /* PEMBATAS antar kategori produk */
+  padding-bottom: 30px;
+}
+
+.price-category h3 {
+  font-size: 25px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #111; /* Judul produk utama hitam */
+
+}
+
+.price-category h4 {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #ddd; /* abu-abu muda */
+  color: #111;
+  padding: 6px 10px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 15px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+table thead th {
+  background-color: #e6e6e6; /* Gunakan background, bukan background-color */
+  color: #111111; /* Teks hitam */
+  padding: 10px;
+  text-align: left;
+  font-weight: 600;
+}
+
+table td {
+  padding: 10px;
+  border: 3px solid #ffffff;
+  background-color: #ffffff;
+}
+
+table tbody tr:nth-child(even) td {
+  background-color:  #fafafa; /* abu-abu sangat muda selang-seling */
+}
+
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch; /* penting: biar gambar ikut tinggi kontainer */
+}
+
+.product-table {
+  flex: 1 1 60%;
+  min-width: 300px;
+}
+
+.product-image {
+  flex: 1 1 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%; /* Menyesuaikan tinggi kontainer */
+  object-fit: cover; /* Biar nggak gepeng */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
