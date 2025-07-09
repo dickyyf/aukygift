@@ -308,24 +308,76 @@ body {
     order: 2;
   }
 
-  .menu {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 10px;
-    width: 100%;
-    background: linear-gradient(to right, #2d8bc7, #c62c6c);
-    padding: 15px;
-  }
+/* === MOBILE MENU SLIDE-IN === */
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Pusat secara vertikal */
+  align-items: center;      /* Pusat secara horizontal */
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 75%;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  box-shadow: -2px 0 12px rgba(0, 0, 0, 0.15);
+  transition: right 0.4s ease;
+  z-index: 999;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
 
-  .menu.active {
-    display: flex;
-  }
+.menu.active {
+  right: 0;
+}
 
-  .menu-toggle {
-    display: block;
-    order: 1;
-  }
+.menu a {
+  color: #2d2d2d;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.menu a:hover {
+  color: #c62c6c;
+  transform: translateX(5px);
+}
+
+/* Tombol ☰ (hamburger) */
+.menu-toggle {
+  display: block;
+  order: 1;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Judul di atas menu */
+.menu-header {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d8bc7;
+  text-align: center;
+}
+
+/* Tombol X */
+.menu-close {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
 
   .logo img {
     height: 35px;
@@ -711,4 +763,5 @@ table tbody tr:nth-child(even) td {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 
