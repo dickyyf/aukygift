@@ -182,28 +182,31 @@ body {
 .footer-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
 .footer-columns {
   display: flex;
-  justify-content: flex-start;
-  gap: 80px;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 180px;
 }
 
 .footer-column h4 {
   font-size: 18px;
   margin-bottom: 12px;
   font-weight: 600;
-  text-align: left;
 }
 
 .footer-column ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: left;
 }
 
 .footer-column ul li {
@@ -214,25 +217,28 @@ body {
   color: white;
   text-decoration: none;
   font-size: 15px;
+  transition: color 0.2s ease;
 }
 
 .footer-column ul li a:hover {
   text-decoration: underline;
+  color: #fff8f8;
 }
 
 .footer-line {
   border-top: 1px solid rgba(255, 255, 255, 0.4);
-  margin: 2px 0;
+  margin: 10px 0;
 }
 
 .footer-social {
-  text-align: left;
+  text-align: center;
 }
 
 .footer-social a {
   color: white;
-  margin-right: 14px;
-  font-size: 20px;
+  margin: 0 12px;
+  font-size: 22px;
+  display: inline-block;
   transition: transform 0.3s ease;
 }
 
@@ -243,7 +249,8 @@ body {
 .footer-bottom {
   text-align: center;
   font-size: 14px;
-  opacity: 0.9;
+  opacity: 0.85;
+  margin-top: 10px;
 }
 
 /* WhatsApp Floating Button */
