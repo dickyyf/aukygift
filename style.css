@@ -182,24 +182,25 @@ body {
 .footer-content {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px; /* lebih rapat dari sebelumnya */
 }
 
 .footer-columns {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* agar kolom berurutan dan tidak berjauhan */
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px; /* kurangi jarak antar kolom */
 }
 
 .footer-column {
   flex: 1;
   min-width: 180px;
+  max-width: 250px; /* batasi agar tidak terlalu melebar */
 }
 
 .footer-column h4 {
   font-size: 18px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-weight: 600;
 }
 
@@ -210,7 +211,7 @@ body {
 }
 
 .footer-column ul li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .footer-column ul li a {
@@ -227,7 +228,7 @@ body {
 
 .footer-line {
   border-top: 1px solid rgba(255, 255, 255, 0.4);
-  margin: 5px 0;
+  margin: 10px 0; /* kurangi spasi atas dan bawah garis */
 }
 
 /* Sosial Media Rata Kiri */
